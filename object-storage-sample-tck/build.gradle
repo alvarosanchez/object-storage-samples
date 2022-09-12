@@ -1,0 +1,15 @@
+plugins {
+    id("groovy")
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+dependencies {
+    implementation enforcedPlatform("io.micronaut:micronaut-bom:${micronautVersion}")
+
+    implementation("io.micronaut:micronaut-http-client")
+    implementation("org.spockframework:spock-core")
+}

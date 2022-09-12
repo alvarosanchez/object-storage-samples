@@ -1,0 +1,14 @@
+plugins {
+    id("java")
+    id("io.micronaut.minimal.application") version "3.5.3"
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+dependencies {
+    implementation("io.micronaut:micronaut-http")
+    implementation("io.micronaut.objectstorage:micronaut-object-storage-core")
+}
