@@ -1,0 +1,6 @@
+micronaut:
+  object-storage:
+    oracle-cloud:
+      default:
+        bucket: profile-pictures-bucket
+        namespace: testtenancy

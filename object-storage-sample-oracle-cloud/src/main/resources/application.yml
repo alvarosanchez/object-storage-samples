@@ -1,0 +1,7 @@
+micronaut:
+  application:
+    name: objectStorageOracleCloud
+netty:
+  default:
+    allocator:
+      max-order: 3

@@ -9,3 +9,4 @@ Includes the following internal projects:
 * `object-storage-sample-aws`: AWS implementation.
 * `object-storage-sample-azure`: Azure implementation.
 * `object-storage-sample-gcp`: Google Cloud implementation.
+* `object-storage-sample-oracle-cloud`: Oracle Cloud implementation.

@@ -11,7 +11,6 @@ import io.micronaut.context.annotation.Requires
 import io.micronaut.context.env.Environment
 import io.micronaut.examples.objectstorage.tck.AbstractUploadControllerSpec
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
-import io.micronaut.test.support.TestPropertyProvider
 import jakarta.inject.Inject
 import jakarta.inject.Singleton
 import org.testcontainers.containers.GenericContainer
@@ -21,16 +20,14 @@ import spock.lang.Shared
 
 import static io.micronaut.http.HttpHeaders.CONTENT_TYPE
 import static io.micronaut.http.MediaType.APPLICATION_JSON
-import static io.micronaut.objectstorage.googlecloud.GoogleCloudStorageConfiguration.PREFIX
 
 @MicronautTest(environments = Environment.GOOGLE_COMPUTE)
 @Property(name = 'spec.name', value = SPEC_NAME)
-class GcpUploadControllerSpec extends AbstractUploadControllerSpec implements TestPropertyProvider {
+class GcpUploadControllerSpec extends AbstractUploadControllerSpec {
 
     public static final String TEST_PROJECT_ID = 'test-project'
-    public static final String SPEC_NAME = 'GoogleCloudStorageFakeGcsServerSpec'
-    public static final String BUCKET_NAME = System.currentTimeMillis()
-    public static final String OBJECT_STORAGE_NAME = 'default'
+    public static final String SPEC_NAME = 'GcpUploadControllerSpec'
+    public static final String BUCKET_NAME = "profile-pictures-bucket"
 
     @Shared
     @AutoCleanup
@@ -70,11 +67,6 @@ class GcpUploadControllerSpec extends AbstractUploadControllerSpec implements Te
                         "error updating fake-gcs-server with external url, response status code $responseCode != 200");
             }
         }
-    }
-
-    @Override
-    Map<String, String> getProperties() {
-        [(PREFIX + '.' + OBJECT_STORAGE_NAME + '.bucket'): BUCKET_NAME]
     }
 
     void setup() {
