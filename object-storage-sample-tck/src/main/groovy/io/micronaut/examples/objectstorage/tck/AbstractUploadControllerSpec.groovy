@@ -8,7 +8,6 @@ import io.micronaut.http.client.HttpClient
 import io.micronaut.http.client.annotation.Client
 import io.micronaut.http.client.multipart.MultipartBody
 import jakarta.inject.Inject
-import spock.lang.Shared
 import spock.lang.Specification
 import spock.lang.Unroll
 

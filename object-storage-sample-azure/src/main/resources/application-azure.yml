@@ -1,0 +1,5 @@
+micronaut:
+  object-storage:
+    azure:
+      default:
+        container: profile-pictures-container

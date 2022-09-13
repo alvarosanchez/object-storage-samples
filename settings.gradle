@@ -4,3 +4,4 @@ include "object-storage-sample-core"
 include "object-storage-sample-tck"
 
 include "object-storage-sample-aws"
+include "object-storage-sample-azure"

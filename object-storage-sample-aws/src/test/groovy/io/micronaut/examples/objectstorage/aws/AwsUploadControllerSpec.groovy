@@ -1,4 +1,4 @@
-package object.storage.aws
+package io.micronaut.examples.objectstorage.aws
 
 import io.micronaut.context.env.Environment
 import io.micronaut.examples.objectstorage.tck.AbstractUploadControllerSpec
