@@ -8,3 +8,4 @@ Includes the following internal projects:
 * `object-storage-sample-tck`: utility project with an abstract Spock specification to test both the cloud-specific and cloud-portable controllers.
 * `object-storage-sample-aws`: AWS implementation.
 * `object-storage-sample-azure`: Azure implementation.
+* `object-storage-sample-gcp`: Google Cloud implementation.

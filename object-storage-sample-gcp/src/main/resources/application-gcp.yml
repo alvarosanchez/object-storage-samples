@@ -1,0 +1,5 @@
+micronaut:
+  object-storage:
+    gcp:
+      default:
+        bucket: profile-pictures-bucket
